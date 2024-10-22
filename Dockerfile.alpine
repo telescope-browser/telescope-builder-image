@@ -1,0 +1,5 @@
+from alpine:latest
+
+run apk update && \
+    apk add alpine-sdk autoconf automake pkgconf make byacc \
+	libbsd-dev ncurses-dev libretls-dev
