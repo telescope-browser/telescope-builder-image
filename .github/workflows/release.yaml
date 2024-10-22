@@ -33,7 +33,7 @@ jobs:
       - name: push the image
         run: |
           IMAGE_ID=ghcr.io/${{ github.repository_owner }}/tbi
-          VERSION=${{ github.sha }}
+          VERSION=${{ matrix.image }}:${{ github.sha }}
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
           docker tag tbi:${{ matrix.image }} $IMAGE_ID:$VERSION
